@@ -3,6 +3,7 @@ import { BooksModule } from './books/books.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthorModule } from './author/author.module';
+import { SalesModule } from './sales/sales.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AuthorModule } from './author/author.module';
     }),
     BooksModule,
     AuthorModule,
+    SalesModule,
   ],
   controllers: [],
   providers: [],
