@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { BooksModule } from './books/books.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { AuthorModule } from './author/author.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ConfigModule } from '@nestjs/config';
       ssl: true,
     }),
     BooksModule,
+    AuthorModule,
   ],
   controllers: [],
   providers: [],
