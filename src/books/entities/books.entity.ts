@@ -4,8 +4,10 @@ import {
   Column,
   DeleteDateColumn,
   ManyToMany,
+  OneToMany,
 } from 'typeorm';
 import { Author } from 'src/author/entities/author.entity';
+import { Sale } from 'src/sales/entities/sales.entity';
 
 @Entity()
 export class Book {
@@ -13,10 +15,13 @@ export class Book {
   id: string;
 
   @Column()
-  titulo: string;
+  title: string;
 
   @ManyToMany(() => Author, (author) => author.libros)
-  autores: Author[];
+  author: Author[];
+
+  @OneToMany(() => Sale, (sale) => sale.book)
+  sales: Sale[];
 
   @DeleteDateColumn({ name: 'deleted_at' })
   deletedAt?: Date;

@@ -19,7 +19,7 @@ export class Author {
   @Column()
   biografia: string;
 
-  @ManyToMany(() => Book, (book) => book.autores)
+  @ManyToMany(() => Book, (book) => book.author)
   @JoinTable()
   libros: Book[];
 
