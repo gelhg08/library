@@ -5,7 +5,7 @@ import {
   DeleteDateColumn,
   ManyToMany,
 } from 'typeorm';
-import { Author } from './Author';
+import { Author } from 'src/author/entities/author.entity';
 
 @Entity()
 export class Book {
