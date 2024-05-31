@@ -14,14 +14,14 @@ export class Author {
   id: number;
 
   @Column()
-  nombre: string;
+  name: string;
 
   @Column()
-  biografia: string;
+  biografhy: string;
 
   @ManyToMany(() => Book, (book) => book.author)
   @JoinTable()
-  libros: Book[];
+  book: Book[];
 
   @DeleteDateColumn()
   deletedAt: Date;

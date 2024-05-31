@@ -17,7 +17,7 @@ export class Book {
   @Column()
   title: string;
 
-  @ManyToMany(() => Author, (author) => author.libros)
+  @ManyToMany(() => Author, (author) => author.book)
   author: Author[];
 
   @OneToMany(() => Sale, (sale) => sale.book)
